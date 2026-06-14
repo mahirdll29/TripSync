@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✈️ TripSync
 
-## Getting Started
+![TripSync Hero](https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop)
 
-First, run the development server:
+> A lightning-fast, offline-first trip planning application designed for absolute privacy and seamless coordination.
 
+Built as a **weekend vibecoded project** by [@mahirdll29](https://github.com/mahirdll29). 🚀
+
+---
+
+## ✨ Features
+
+- **Offline-First Local Database:** Fully migrated away from clunky cloud databases. TripSync runs on a blazingly fast SQLite instance directly on your machine.
+- **Passwordless Authentication:** No cumbersome OAuth configurations or passwords. Secure, 30-day persistent JWT sessions using simple Name + Email magic links.
+- **Dynamic City Routing:** Add multiple destinations per trip, neatly organized in sleek, animated tabs.
+- **Hotel Shortlisting:** Drop Booking.com, Airbnb, Agoda, or Expedia links. TripSync automatically tags the booking source and lets you shortlist favorites.
+- **Seamless Sharing:** Generate secure invite links. Anyone joining instantly sees the synchronized itinerary.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling:** Vanilla CSS with modern Glassmorphism & custom utility classes
+- **Database:** [better-sqlite3](https://github.com/WiseLibs/better-sqlite3) (Zero config, local file-based DB)
+- **Authentication:** [NextAuth.js v5](https://authjs.dev/) (Custom JWT Credentials)
+- **Validation:** [Zod](https://zod.dev/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+## 🚀 Getting Started
+
+Since TripSync is designed for local, private use, getting it running is incredibly simple. No cloud database keys required.
+
+### Prerequisites
+- Node.js 20+ installed
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/mahirdll29/tripsync.git
+cd tripsync
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Start the Development Server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+That's it! 
+- TripSync will automatically create your local database file (`tripsync.db`) on the first run.
+- Open [http://localhost:3000](http://localhost:3000) in your browser.
+- Enter any name and email to instantly log in.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+tripsync/
+├── src/
+│   ├── app/              # Next.js App Router & API Handlers
+│   ├── components/       # Reusable React components (UI, Modals, Cards)
+│   ├── lib/              # Core logic
+│   │   ├── db.ts         # SQLite Schema and connection
+│   │   ├── queries.ts    # SQL abstraction layer
+│   │   ├── auth.ts       # NextAuth configuration
+│   │   └── validations.ts# Zod schemas
+│   └── types/            # TypeScript interfaces
+├── tripsync.db           # Auto-generated local SQLite database
+└── next.config.ts        # Next.js configuration
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
+Since this is a personal weekend project, contributions aren't expected, but feel free to fork the repository and customize it for your own trips!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE).
