@@ -1,8 +1,8 @@
 import Database from "better-sqlite3"
 import path from "path"
 
-// Database file lives in the project root
-const DB_PATH = path.join(process.cwd(), "tripsync.db")
+// Database file lives in the project root by default, or uses environment variable for cloud volumes (like Railway)
+const DB_PATH = process.env.DB_PATH || path.join(process.cwd(), "tripsync.db")
 
 let _db: Database.Database | null = null
 
