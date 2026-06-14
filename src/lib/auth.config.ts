@@ -7,6 +7,7 @@ import Credentials from "next-auth/providers/credentials"
  * User upsert into SQLite happens in auth.ts (non-Edge).
  */
 export default {
+  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
   providers: [
     Credentials({
       id: "demo-login",
