@@ -73,6 +73,8 @@ tripsync/
 └── next.config.ts        # Next.js configuration
 ```
 
+
+
 ## 🤝 Contributing
 Since this is a personal weekend project, contributions aren't expected, but feel free to fork the repository and customize it for your own trips!
 
