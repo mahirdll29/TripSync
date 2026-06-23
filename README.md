@@ -1,4 +1,4 @@
-# ✈️ TripSync
+# TripSync
 
 > A lightning-fast, offline-first trip planning application designed for absolute privacy and seamless coordination.
 
