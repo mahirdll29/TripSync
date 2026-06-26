@@ -26,36 +26,6 @@ Built as a **weekend vibecoded project** by [@mahirdll29](https://github.com/mah
 
 ---
 
-## 🚀 Getting Started
-
-Since TripSync is designed for local, private use, getting it running is incredibly simple. No cloud database keys required.
-
-### Prerequisites
-- Node.js 20+ installed
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/mahirdll29/tripsync.git
-cd tripsync
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Start the Development Server
-```bash
-npm run dev
-```
-
-That's it! 
-- TripSync will automatically create your local database file (`tripsync.db`) on the first run.
-- Open [http://localhost:3000](http://localhost:3000) in your browser.
-- Enter any name and email to instantly log in.
-
----
-
 ## 📂 Project Architecture
 
 ```
